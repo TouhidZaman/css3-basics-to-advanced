@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform Example</title>
+    <style>
+        .title {
+            text-align: center;
+            color: darksalmon;
+        }
+        .transform-example {
+            width: 70%;
+            margin: auto;
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 1px 1px 5px gray;  /* box-shadow: x(for x exis), y(exis), transperancy, color */
+            
+        }
+        .box {
+            height: 150px;
+            width: 150px;
+            color: white;
+            text-align: center;
+        }
+        .box-1 {
+            background-color: hotpink;
+        }
+        .box-2 {
+            background-color: purple;
+            transform: scale(0.75);
+        }
+
+        .box-3 {
+            background-color: green;
+        }
+        .box-4 {
+            background-color: salmon;
+            transform: translateX(50px);
+        }
+
+        .box-5 {
+            background-color: red;
+            
+        }
+        .box-6 {
+            background-color: darkkhaki;
+            transform:skew(10deg, 10deg) scale(0.75);
+            
+        }
+        .box-7 {
+            background-color: brown;
+            
+        }
+        .box-8 {
+            background-color: blue;
+            transform:rotate(25deg) scale(0.75);
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">CSS Transform Examples</h1>
+    <div class="transform-example">
+        <div class="box box-1">
+            <div class="box box-2">scale(0.75)</div>
+        </div>
+
+        <div class="box box-3">
+            <div class="box box-4">translateX(50px)</div>
+        </div>
+
+        <div class="box box-5">
+            <div class="box box-6">skew(10deg, 10deg) scale(0.75)</div>
+        </div>
+
+        <div class="box box-7">
+            <div class="box box-8">rotate(25deg) scale(0.75)</div>
+        </div>
+    </div>
+</body>
+</html>
