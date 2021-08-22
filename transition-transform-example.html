@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition transform cricket bat ball example</title>
+    <style>
+        .field .cricket-bat {
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .field:hover .cricket-bat {
+            transform: rotate(-60deg);
+            transform-origin: 100% 0%;
+        }
+
+        .ball {
+            width: 35px;
+            height: 35px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            left: 537px;
+            transition: transform 1s ease-in-out 0.4s;
+        }
+
+        .field:hover .ball {
+            transform: translate(600px, -300px);
+        }
+    </style>
+</head>
+<body>
+    <div class="field">
+        
+            <img class="cricket-bat" src="images/cricket-bat.png" alt="">
+       
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
