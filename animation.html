@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        @keyframes animate-ball-1 {
+            33% {
+                transform: translate(200px, 195px);
+            }
+            66% {
+                transform: translate(400px, 0px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+        @keyframes animate-ball-2 {
+            33% {
+                transform: translate(-200px, 195px);
+            }
+            66% {
+                transform: translate(-400px, 0px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+        body {
+            margin: 0;
+        }
+        .stage {
+            height: 300px;
+            width: 100%;
+            background-color: gray;
+            display: flex;
+            justify-content: space-around;
+        }
+        .ball {
+            height: 105px;
+            width: 105px;
+            border-radius: 50%;
+        }
+        .ball-1 {
+            background-color: lightgreen;
+        }
+        .ball-2 {
+            background-color: lightpink;
+        }
+        .stage:hover .ball-1 {
+            animation: animate-ball-1 5s ease-in-out 0s infinite reverse;
+        }
+        .stage:hover .ball-2 {
+            animation: animate-ball-2 5s ease-in-out 0s infinite forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div class="ball ball-1"></div>
+        <div class="ball ball-2"></div>
+    </div>
+</body>
+</html>
