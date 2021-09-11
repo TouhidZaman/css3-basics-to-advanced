@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            color: white;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Use to Create columns */
+            grid-template-rows: 1fr 1fr; /* Use to Create columns */
+            /* Note 'fr' will automatically calculate the available spaces and handle spce distribution */
+        }
+        .box-1 {
+            background-color: deepskyblue;
+        }
+        .box-2 {
+            background-color: darkblue;
+            justify-self: center;
+            align-self: center;
+        }
+        .box-3 {
+            background-color: darkgreen;
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            grid-column: 1/3; /* shortcut: will take avilable space between column 1 and 2 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-1">
+            <h1>box-1</h1>
+        </div>
+        <div class="box-2">
+            <h1>box-2</h1>
+        </div>
+        <div class="box-3">
+            <h1>box-3</h1>
+        </div>
+    </div>
+</body>
+</html>
