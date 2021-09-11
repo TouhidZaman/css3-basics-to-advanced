@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Grid Advanced</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            color: white;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* Use to Create columns */
+            grid-template-rows: 1fr 1fr 1fr; /* Use to Create columns */
+            /* Note 'fr' will automatically calculate the available spaces and handle spce distribution */
+            grid-template-areas: 
+                "box3 box3 box1"
+                "box2 . box1"
+                "box2 . ."; /* visual representation of rows and colums in grid area */
+            /* Note: use "." for empty space in grid areas  */
+        }
+        .box-1 {
+            background-color: deepskyblue;
+            grid-area: box1; /* defining name of this content for grid area */
+            display: flex; /* uses of flex box inside grid area */
+            justify-content: space-around;
+            align-items: center;
+        }
+        .box-2 {
+            background-color: darkblue;
+            grid-area: box2;
+        }
+        .box-3 {
+            background-color: darkgreen;
+            grid-area: box3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-1">
+            <h1>box-1</h1>
+            <p>Lorem ipsum dolor sit.</p>
+        </div>
+        <div class="box-2">
+            <h1>box-2</h1>
+        </div>
+        <div class="box-3">
+            <h1>box-3</h1>
+        </div>
+    </div>
+</body>
+</html>
